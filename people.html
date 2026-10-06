@@ -1,0 +1,847 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>People | Climate Leaders @ Penn</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* ================================================
+			   PEOPLE PAGE STYLES
+			   These styles can be moved to assets/css/main.css
+			   ================================================ */
+
+			/* Section headers */
+			.people-section {
+				padding: 4em 2em;
+				max-width: 1200px;
+				margin: 0 auto;
+			}
+
+			.people-section h2 {
+				text-align: center;
+				margin-bottom: 0.5em;
+			}
+
+			.people-section .section-subtitle {
+				text-align: center;
+				color: #888;
+				margin-bottom: 2.5em;
+				font-style: italic;
+			}
+
+			/* Card grid */
+			.card-grid {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 2em;
+				justify-content: center;
+				margin: 0 auto;
+			}
+
+			/* Individual card */
+			.person-card {
+				background: #fff;
+				border-radius: 8px;
+				box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+				padding: 1.8em 1.5em;
+				width: 260px;
+				text-align: center;
+				transition: transform 0.2s ease, box-shadow 0.2s ease;
+			}
+
+			.person-card:hover {
+				transform: translateY(-4px);
+				box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+			}
+
+			/* Board cards slightly larger */
+			.board-card {
+				width: 220px;
+			}
+
+			/* Photo circle */
+			.person-card .photo-wrap {
+				width: 110px;
+				height: 110px;
+				border-radius: 50%;
+				overflow: hidden;
+				margin: 0 auto 1em;
+				background: #e8e8e8;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.person-card .photo-wrap img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+
+			/* Placeholder icon when no photo */
+			.person-card .photo-wrap .placeholder-icon {
+				font-size: 2.5em;
+				color: #bbb;
+			}
+
+			/* Card text */
+			.person-card h3 {
+				margin: 0 0 0.15em;
+				font-size: 1.05em;
+			}
+
+			.person-card .role {
+				font-size: 0.85em;
+				color: #5a8a6a;
+				font-weight: 600;
+				margin-bottom: 0.25em;
+			}
+
+			.person-card .program {
+				font-size: 0.8em;
+				color: #999;
+				margin-bottom: 0.9em;
+				font-style: italic;
+			}
+
+			.person-card .bio {
+				font-size: 0.82em;
+				text-align: left;
+				line-height: 1.6;
+				color: #555;
+				margin-bottom: 1em;
+			}
+
+			.person-card .linkedin-btn {
+				display: inline-block;
+				font-size: 0.8em;
+				color: #0077b5;
+				text-decoration: none;
+				border: 1px solid #0077b5;
+				border-radius: 4px;
+				padding: 0.3em 0.8em;
+				transition: background 0.2s, color 0.2s;
+			}
+
+			.person-card .linkedin-btn:hover {
+				background: #0077b5;
+				color: #fff;
+			}
+
+			/* Divider between sections */
+			.section-divider {
+				border: none;
+				border-top: 1px solid #e0e0e0;
+				margin: 3em auto;
+				max-width: 800px;
+			}
+
+			/* Past fellows table */
+			.past-fellows-table {
+				max-width: 800px;
+				margin: 0 auto;
+				width: 100%;
+				border-collapse: collapse;
+				font-size: 0.9em;
+			}
+
+			.past-fellows-table th {
+				text-align: left;
+				border-bottom: 2px solid #ddd;
+				padding: 0.6em 1em;
+				color: #444;
+			}
+
+			.past-fellows-table td {
+				padding: 0.6em 1em;
+				border-bottom: 1px solid #eee;
+				color: #555;
+			}
+
+			.past-fellows-table tr:hover td {
+				background: #f9f9f9;
+			}
+
+			/* Responsive */
+			@media (max-width: 768px) {
+				.person-card, .board-card {
+					width: 90%;
+					max-width: 320px;
+				}
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+		<div id="wrapper">
+
+			<!-- Header -->
+			<header id="header" class="alt">
+				<h1>Our People</h1>
+				<p>The students, leaders, and fellows driving climate action at Penn.</p>
+			</header>
+
+			<!-- Nav -->
+			<nav id="nav">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="#board" class="active">Board</a></li>
+					<li><a href="#fellows">Current Fellows</a></li>
+					<li><a href="#past-fellows">Past Fellows</a></li>
+				</ul>
+			</nav>
+
+			<!-- Main -->
+			<div id="main">
+
+				<!-- =====================
+				     BOARD SECTION
+				     ===================== -->
+				<section id="board" class="main">
+					<div class="people-section">
+						<h2>Board</h2>
+						<p class="section-subtitle">Meet the student leaders running Climate Leaders @ Penn.</p>
+
+						<div class="card-grid">
+
+							<!-- =============================
+							     BOARD CARD TEMPLATE
+							     To add a board member, copy one
+							     card block below and update the
+							     name, role, program, bio, and
+							     LinkedIn URL.
+							     ============================= -->
+
+							<!-- Brandon Licata -->
+							<div class="person-card board-card">
+								<div class="photo-wrap">
+									<img src="images/people/Brandon-Licata.jpg" alt="Brandon Licata">
+								</div>
+								<h3>Brandon Licata</h3>
+								<div class="role">Executive Co-Chair</div>
+								<div class="program">Master of Environmental Studies</div>
+								<p class="bio">Brandon is a Master of Environmental Studies candidate at Penn, with a concentration in Resilience and Adaptation. Growing up in Hampton Roads, he became interested in how communities, government, and industry can prepare for environmental crises. He earned his bachelor's degree in Global Environments and Sustainability from the University of Virginia and is focused on advancing equitable, evidence-based approaches to climate adaptation and resilience planning.</p>
+								<a href="https://www.linkedin.com/in/brandon-licata-1a7171161" class="linkedin-btn" target="_blank">LinkedIn</a>
+							</div>
+
+                            <!-- Mel Morgan -->
+							<div class="person-card board-card">
+								<div class="photo-wrap">
+									 <img src="images/people/Mel-Morgan.jpg" alt="Mel Morgan">
+								</div>
+								<h3>Mel Morgan</h3>
+								<div class="role">Executive Co-Chair</div>
+								<div class="program">Master of Environmental Studies</div>
+								<p class="bio">Mel is a second-year student in the Master of Environmental Studies program, with a concentration in Data and Resource Management. After graduating from the George Washington University with a Bachelors in Geography and GIS, they worked in civic education and youth empowerment before training government election workers in California. Mel is excited to deepen their interest in citizen science, mapping, and community engagement through Climate Leaders.</p>
+								<a href="https://www.linkedin.com/in/melmorgan1313/" class="linkedin-btn" target="_blank">LinkedIn</a>
+							</div>
+
+							<!-- Aniketh Rao -->
+							<div class="person-card board-card">
+								<div class="photo-wrap">
+									<img src="images/people/Aniketh-Rao.jpg" alt="Aniketh Rao">
+								</div>
+								<h3>Aniketh Rao</h3>
+								<div class="role">Capstone Chair</div>
+								<div class="program">Systems Engineering</div>
+								<p class="bio">Aniketh is pursuing a graduate degree in systems engineering with a concentration in energy and environment. Prior to his graduate studies, he interned at Saint-Gobain and Express Scripts. He also holds a Bachelor of Science in Mathematics and Statistics from Haverford College.</p>
+								<!-- No LinkedIn provided -->
+							</div>
+
+							<!-- Morgan Bauer -->
+							<div class="person-card board-card">
+								<div class="photo-wrap">
+									<img src="images/people/Morgan-Bauer.jpg" alt="Morgan Bauer">
+								</div>
+								<h3>Morgan Bauer</h3>
+								<div class="role">Capstone Chair</div>
+								<!-- TODO: Add program -->
+								<div class="program">Master of Science in Engineering, Robotics</div>
+								<!-- TODO: Add bio -->
+								<p class="bio">As an MSE candidate in Robotics at Penn’s GRASP Lab, I’ve always gravitated toward high-dimensional challenges. My background spans publishing in combinatorics, developing deep learning models, exploring post-quantum cryptography, and applying sports analytics at the highest level in the NFL.
+                                Technical rigor aside, my core drive is human: I believe deeply in the joy of shared learning and the responsibility of engineering. As a student, mentor, and peer in computer science and mathematics, my goal is to leverage advanced technical systems to solve meaningful problems and build a better future for the communities we design for.</p>
+								<!-- TODO: Add LinkedIn if available -->
+							</div>
+
+						</div>
+					</div>
+				</section>
+
+				<hr class="section-divider">
+
+				<!-- =====================
+				     CURRENT FELLOWS
+				     ===================== -->
+				<section id="fellows" class="main">
+					<div class="people-section">
+						<h2>Last Year's Fellows</h2>
+						<p class="section-subtitle">The 2025 - 2026 cohort of Climate Leaders Fellows represented 13 graduate programs and 7 schools from across the University.</p>
+
+						<div class="card-grid">
+
+							<!-- =============================
+							     FELLOW CARD TEMPLATE
+							     To add a fellow, copy one card
+							     block and update the fields.
+							     To remove a fellow, delete the
+							     entire card block.
+							     ============================= -->
+
+							<!-- Vicky Tang -->
+							<div class="person-card">
+								<div class="photo-wrap">
+									<img src="images/people/Vicky-Tang.jpg" alt="Vicky Tang">
+								</div>
+								<h3>Vicky Tang</h3>
+								<div class="program">MS in Social Policy + Data Analytics & Master in Law</div>
+								<p class="bio">Vicky's work focuses on combating climate misinformation and strengthening public trust in science and policy, integrating data-driven analysis with legal and ethical perspectives to advance more equitable climate communication and governance. She earned her B.A. from New York University, where she double-majored in Politics and Philosophy.</p>
+								<!-- No LinkedIn provided -->
+							</div>
+
+							
+
+							<!-- Yolanda Hu -->
+							<div class="person-card">
+								<div class="photo-wrap">
+									<img src="images/people/Yolanda-Hu.jpg" alt="Yolanda Hu">
+								</div>
+								<h3>Yolanda Hu</h3>
+								<div class="program">MS in Social Policy and Data Analytics</div>
+								<p class="bio">Yolanda's work focuses on energy policy and sustainability, with a particular interest in energy efficiency projects and data-driven approaches to climate governance. Having gained experience across the United States, China, the Netherlands, and Australia, she brings a global perspective to advancing equitable and sustainable energy solutions.</p>
+								<a href="https://www.linkedin.com/in/chenyue-yolanda-hu/" class="linkedin-btn" target="_blank">LinkedIn</a>
+							</div>
+
+							<!-- Xuan Liu -->
+							<div class="person-card">
+								<div class="photo-wrap">
+									<img src="images/people/Xuan-Liu.jpg" alt="Xuan Liu">
+								</div>
+								<h3>Xuan (Leah) Liu</h3>
+								<div class="program">Education, Culture & Society</div>
+								<p class="bio">A sociology graduate student at Penn, currently serving as Vice President of PGELA. With a background in ecocriticism and sociolinguistics and lived experiences across China, France, and the UK, she brings a cross-cultural lens to climate issues and hopes to bridge humanities perspectives with climate action through green finance and sustainable investment.</p>
+								<a href="https://www.linkedin.com/in/xuan-leah-liu" class="linkedin-btn" target="_blank">LinkedIn</a>
+							</div>
+
+							<!-- Shuhan Gao -->
+							<div class="person-card">
+								<div class="photo-wrap">
+									<img src="images/people/Shuhan-Gao.jpg" alt="Shuhan Gao">
+								</div>
+								<h3>Shuhan Gao</h3>
+								<div class="program">Master of Laws</div>
+								<p class="bio">Shuhan is an LL.M student at Penn Carey Law School with a strong interest in climate change law. Previously, she studied China Studies as a Yenching Scholar at Peking University. With internship experience at the British Chamber of Commerce in China and UNGC, she now aims to address climate migration through interdisciplinary legal and policy approaches.</p>
+								<a href="https://www.linkedin.com/in/shuhan-gao/" class="linkedin-btn" target="_blank">LinkedIn</a>
+							</div>
+
+							<!-- Kabeera Singh -->
+							<div class="person-card">
+                                <div class="photo-wrap" style="background: #f5f5f5; box-sizing: border-box; overflow: hidden;">
+                                    <img src="images/logos/Logo_Climate Leaders at Penn (1).png" alt="Climate Leaders @ Penn" style="width: 100%; height: 100%; object-fit: contain; border-radius: 0; transform: scale(2.0);">
+                                </div>
+                                <h3>Kabeera Singh</h3>
+							<div class="program">Masters in Data Science</div>
+							<p class="bio">Kabeera explores how AI and machine learning can support ecological research and climate resilience. He previously studied Informatics and Economics at UMass Amherst and worked in the Spatial Ecology Lab, developing AI tools for native garden design and forestry modeling.</p>
+							<a href="https://www.linkedin.com/in/kabeera-singh-879918209/" class="linkedin-btn" target="_blank">LinkedIn</a>
+    						</div>
+
+							<!-- Sanyukta Singh -->
+							<div class="person-card">
+								<div class="photo-wrap">
+									<img src="images/people/Sanyukta-Singh.jpg" alt="Sanyukta Singh">
+								</div>
+								<h3>Sanyukta Singh</h3>
+								<div class="program">Master of Environmental Studies</div>
+								<p class="bio">Interested in corporate sustainability, Sanyukta is passionate about water stewardship, sustainable fashion, and fostering just transitions. At Penn she is a Project Lead at Penn Sustainability Consulting developing a Climate Resilience Plan for PennMed. Her undergraduate capstone investigated whether community-led water management initiatives can foster a gender just transition in rural communities in India.</p>
+								<a href="https://www.linkedin.com/in/sanyukta-singh14" class="linkedin-btn" target="_blank">LinkedIn</a>
+							</div>
+
+							<!-- Xiaen (June) Chen -->
+							<div class="person-card">
+								<div class="photo-wrap">
+									<img src="images/people/Xiaen-Chen.jpg" alt="Xiaen Chen">
+								</div>
+								<h3>Xiaen (June) Chen</h3>
+								<div class="program">MS in Social Policy and Data Analytics</div>
+								<p class="bio">June explores how data can tell stories about people, policy, and the planet. At Penn, she turns analysis into briefs and dashboards that make climate evidence actionable, while promoting sustainable practices through student advocacy. She hopes to bridge research and strategy to design inclusive, real-world solutions.</p>
+								<a href="https://www.linkedin.com/in/xiaen-chen-476a12283/" class="linkedin-btn" target="_blank">LinkedIn</a>
+							</div>
+
+							<!-- Denise Anderson -->
+							<div class="person-card">
+								<div class="photo-wrap">
+									<img src="images/people/Denise-Anderson.jpg" alt="Denise Anderson">
+								</div>
+								<h3>Denise Anderson</h3>
+								<div class="program">Executive Master of Public Administration</div>
+								<p class="bio">For the last ten years, Denise has lived and worked in a low-income marginalized community in North Philly as the local Site Director for an international Christian NGO, where she developed a grassroots community organization and directed a welding workforce development program. She brings a deep passion for racial and economic justice to climate justice and mitigation work.</p>
+								<!-- No LinkedIn provided -->
+							</div>
+
+							<!-- Rita Wu -->
+							<div class="person-card">
+								<div class="photo-wrap">
+									<img src="images/people/Rita-Wu.jpg" alt="Rita Wu">
+								</div>
+								<h3>Rita Wu</h3>
+								<div class="program">Master of City Planning</div>
+								<p class="bio">Rita focuses on urban resiliency and flood adaptation, seeking global solutions to climate change. Originally from China, she interned with the Nashville City Government to develop a watershed-based environmental plan. Combining design and sustainability, she also worked with Red Note to organize art exhibitions that promote environmental awareness.</p>
+								<a href="https://www.linkedin.com/in/sirui-rita-wu-8976a1261/" class="linkedin-btn" target="_blank">LinkedIn</a>
+							</div>
+
+							<!-- Bailey Lin -->
+							<div class="person-card">
+								<div class="photo-wrap">
+									<img src="images/people/Xinying-Lin.jpg" alt="Bailey Lin">
+								</div>
+								<h3>Bailey Lin</h3>
+								<div class="program">Master of Environmental Studies</div>
+								<p class="bio">Bailey is specializing in renewable energy and climate policy. She is currently a Data Analytics Intern at Clearloop, a Silicon Ranch Company, focusing on carbon markets and high-impact solar siting. Her work and interests center on data-driven climate market analysis, energy transition strategy, and climate finance.</p>
+								<a href="https://www.linkedin.com/in/baileylin/" class="linkedin-btn" target="_blank">LinkedIn</a>
+							</div>
+
+							<!-- Lyn Jang -->
+							<div class="person-card">
+								<div class="photo-wrap">
+									<img src="images/people/Lyn-Jang.jpg" alt="Lyn Jang">
+								</div>
+								<h3>Lyn Jang</h3>
+								<div class="program">Master of Business Administration, Wharton</div>
+								<p class="bio">Before Wharton, Lyn worked at Korea Development Bank, financing public-private partnership projects in transportation, infrastructure, and renewable energy across Asia and North America. She is particularly passionate about climate finance and policy, seeking to bridge private capital and public initiatives to drive scalable, long-term solutions for a sustainable energy transition.</p>
+								<a href="https://www.linkedin.com/in/lyn-jang-9a34a9142/" class="linkedin-btn" target="_blank">LinkedIn</a>
+							</div>
+
+							<!-- Neil Sehgal -->
+							<div class="person-card">
+								<div class="photo-wrap">
+									<img src="images/people/Neil-Sehgal.jpg" alt="Neil Sehgal">
+								</div>
+								<h3>Neil Sehgal</h3>
+								<div class="program">PhD in Computer and Information Science</div>
+								<p class="bio">Neil is a third-year PhD student whose research sits at the intersection of computational social science and public health, with a current focus on designing dialogue systems that promote health behavior change. He holds a Master of Engineering from Harvard University and an AB from Brown University.</p>
+								<!-- No LinkedIn provided -->
+							</div>
+
+							<!-- Nabila Safitri -->
+							<div class="person-card">
+								<div class="photo-wrap">
+									<img src="images/people/Nabila-Safitri.jpg" alt="Nabila Safitri">
+								</div>
+								<h3>Nabila Safitri</h3>
+								<div class="program">Master of Environmental Studies</div>
+								<p class="bio">Nabila has work experience in environmental think-tanks, doing projects on waste, water, and air quality management. Her interest lies in sustainable energy, waste management, and their intersection. Her current graduate capstone project focuses on decentralized biogas generation from animal wastes in a village setting in Indonesia.</p>
+								<a href="https://www.linkedin.com/in/nabila-safitri13/" class="linkedin-btn" target="_blank">LinkedIn</a>
+							</div>
+
+							<!-- Simone Cavalcante -->
+							<div class="person-card">
+								<div class="photo-wrap">
+									<img src="images/people/Simone-Cavalcante.jpg" alt="Simone Cavalcante">
+								</div>
+								<h3>Simone Cavalcante</h3>
+								<div class="program">MS in Nonprofit Leadership</div>
+								<p class="bio">An educator and researcher from Rio de Janeiro with experience across Brazil, the U.S., and Europe, Simone holds an M.A. in Portuguese and Brazilian Studies from the University of Illinois. She has volunteered with immigrant and refugee communities in Portugal, serves on the board of Clube Safo, and consults for project Guardians of the Coast, both in Lisbon.</p>
+								<a href="https://www.linkedin.com/in/simone-cavalcante-8328b6198" class="linkedin-btn" target="_blank">LinkedIn</a>
+							</div>
+
+							<!-- Huiqi Chen -->
+							<div class="person-card">
+								<div class="photo-wrap">
+									<img src="images/people/Huiqi-Chen.jpg" alt="Huiqi Chen">
+								</div>
+								<h3>Huiqi Chen</h3>
+								<div class="program">Master of Social Policy and Data Analytics</div>
+								<p class="bio">Passionate about climate action and community impact, Huiqi loves connecting data with real stories to make sustainability more human and hopeful.</p>
+								<a href="https://www.linkedin.com/in/huiqi-chen-7a5bb024a" class="linkedin-btn" target="_blank">LinkedIn</a>
+							</div>
+
+							<!-- Zainab Sesay -->
+							<div class="person-card">
+								<div class="photo-wrap">
+									<img src="images/people/Zainab-Sesay.jpg" alt="Zainab Sesay">
+								</div>
+								<h3>Zainab Melisa Sesay</h3>
+								<div class="program">Master of Environmental Studies</div>
+								<p class="bio">A mining engineer and environmental researcher passionate about integrating sustainability and climate resilience into the extractive sector. Zainab has led environmental and social impact assessments for extractive and energy operations in West Africa and developed community environmental management plans. She aspires to influence global policy on just transitions and sustainable resource extraction.</p>
+								<a href="https://www.linkedin.com/in/zainab-melisa-sesay-gmslie-a4095825a" class="linkedin-btn" target="_blank">LinkedIn</a>
+							</div>
+
+							<!-- Aditya Kohli -->
+							<div class="person-card">
+								<div class="photo-wrap">
+									<img src="images/people/Aditya-Kohli.jpg" alt="Aditya Kohli">
+								</div>
+								<h3>Aditya Kohli</h3>
+								<div class="program">Master of Business Administration, Wharton</div>
+								<p class="bio">Aditya is double-majoring in Artificial Intelligence and ESG Factors for Business. Before Wharton, he worked at Microsoft as a Product Manager, leading AI and accessibility initiatives for Xbox. At Penn, he leads the Climate Tech Team for Wharton Venture Foragers and serves as VP of Social Impact for his cluster. He is passionate about leveraging technology to drive scalable solutions for climate innovation.</p>
+								<a href="https://www.linkedin.com/in/aditya-kohli-64a918137/" class="linkedin-btn" target="_blank">LinkedIn</a>
+							</div>
+
+							<!-- Sarah Arnold -->
+							<div class="person-card">
+								<div class="photo-wrap">
+									<img src="images/people/Sarah-Arnold.jpg" alt="Sarah Arnold">
+								</div>
+								<h3>Sarah Arnold</h3>
+								<div class="program">Master of Laws</div>
+								<p class="bio">Sarah is pursuing the "Energy, Security and Human Rights" concentration at Penn Carey Law. She graduated in 2024 with a BA in Jurisprudence from the University of Oxford. At Penn, Sarah is a member of the Environmental Law Project and a Research Assistant to Professor Welton, focusing on energy policy and finance.</p>
+								<a href="https://www.linkedin.com/in/saraharnold032" class="linkedin-btn" target="_blank">LinkedIn</a>
+							</div>
+
+							<!-- Shandon Black -->
+							<div class="person-card">
+								<div class="photo-wrap">
+									<img src="images/people/Shandon-Black.jpg" alt="Shandon Black">
+								</div>
+								<h3>Shandon Black</h3>
+								<div class="program">Master of Environmental Studies</div>
+								<p class="bio">Shandon aims to drive sustainable development in education, clean air and water, healthy food, and safe homes to bring a diverse array of voices and solutions to meet the complex demands of environmental disruption. He is interested in the role of decentralized, community-governed nonprofit structure as a means to guide climate action.</p>
+								<a href="https://www.linkedin.com/in/shandon-black" class="linkedin-btn" target="_blank">LinkedIn</a>
+							</div>
+
+							<!-- Ashley Chen -->
+							<div class="person-card">
+								<div class="photo-wrap">
+									<img src="images/people/Ashley-Chen.jpg" alt="Ashley Chen">
+								</div>
+								<h3>Ashley Chen</h3>
+								<div class="program">Master of Business Administration, Wharton</div>
+								<p class="bio">Ashley brings a background in the autonomous vehicle industry, where she helped translate complex product features into meaningful benefits for customers, investors, and regulators. She is passionate about advancing sustainable business practices, with experience in packaging and product waste reduction and circularity initiatives.</p>
+								<a href="https://www.linkedin.com/in/chenash/" class="linkedin-btn" target="_blank">LinkedIn</a>
+							</div>
+
+							<!-- Lia Goodman -->
+							<div class="person-card">
+								<div class="photo-wrap">
+									<img src="images/people/Lia-Goodman.jpg" alt="Lia Goodman">
+								</div>
+								<h3>Lia Goodman</h3>
+								<div class="program">Master of Public Administration</div>
+								<p class="bio">Lia specializes in water resources management and disaster preparedness. With an interdisciplinary background in wetlands research and congressional advocacy, she is passionate about translating science into actionable policies that advance adaptive strategies for flood resilience.</p>
+								<a href="https://www.linkedin.com/in/liagoodman/" class="linkedin-btn" target="_blank">LinkedIn</a>
+							</div>
+
+							<!-- Hannah Clarkson -->
+							<div class="person-card">
+								<div class="photo-wrap">
+									<img src="images/people/Hannah-Clarkson.jpg" alt="Hannah Clarkson">
+								</div>
+								<h3>Hannah Clarkson</h3>
+								<div class="program">PhD in Materials Science and Engineering</div>
+								<p class="bio">A 4th-year PhD candidate researching biomineralization for sustainable concrete and living building materials. As an NSF Climate-CARE National Research Trainee, she works with students in the Weitzman School of Design to tackle extreme urban heat. Hannah obtained her BS from Lehigh University and MS from Penn.</p>
+								<a href="https://www.linkedin.com/in/hannah-clarkson-75a54818b/" class="linkedin-btn" target="_blank">LinkedIn</a>
+							</div>
+
+							<!-- Sethu Lakshmi -->
+							<div class="person-card">
+								<div class="photo-wrap">
+									<img src="images/people/Sethu-Lakshmi.jpg" alt="Sethu Lakshmi">
+								</div>
+								<h3>Sethu Lakshmi</h3>
+								<div class="program">Master of Environmental Studies (Sustainability)</div>
+								<p class="bio">Sethu holds an Integrated Master's in Economics and Development Studies from IIT Madras. Prior to graduate school she worked as a Health Systems Design Consultant, partnering with Indian state governments to advance public health policy. She now focuses on accelerating renewable energy deployment at the intersection of policy, technology, and market design.</p>
+								<!-- No LinkedIn provided -->
+							</div>
+<!-- Taï Schroeder -->
+							<div class="person-card">
+								<div class="photo-wrap">
+									<img src="images/people/Tai-Schroeder.jpg" alt="Taï Schroeder">
+								</div>
+								<h3>Taï Schroeder</h3>
+								<div class="program">Master of Environmental Studies & MS in Nonprofit Leadership</div>
+								<p class="bio">Taï is passionate about environmental justice, focusing on the role of social sciences in land and wildlife conservation. Before Penn, she spent over a decade working in nonprofit operations, programs, and fundraising. She holds a B.A. in Zoology from the University of Wisconsin-Madison. Outside class, she enjoys trail running, salsa dancing, and a lively game of ping pong.</p>
+								<a href="https://www.linkedin.com/in/taischroeder/" class="linkedin-btn" target="_blank">LinkedIn</a>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<hr class="section-divider">
+
+				<!-- =====================
+     PAST FELLOWS
+     ===================== -->
+<section id="past-fellows" class="main">
+    <div class="people-section">
+        <h2>Past Fellows</h2>
+        <p class="section-subtitle">Alumni of the Climate Leaders @ Penn Fellowship.</p>
+
+        <table class="past-fellows-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Cohort</th>
+                    <th>Program</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <!-- =====================
+                     2024 – 2025 COHORT
+                     ===================== -->
+                <tr>
+                    <td colspan="3" style="background:#f0f4f1; font-weight:700; color:#3a6b4a; font-style:normal; letter-spacing:0.04em; padding: 0.7em 1em;">
+                        2024 – 2025
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ananya Pillai</td>
+                    <td>2024–2025</td>
+                    <td>Master of Environmental Studies (Sustainability)</td>
+                </tr>
+                <tr>
+                    <td>Aradhita Srivastava</td>
+                    <td>2024–2025</td>
+                    <td>Master of Environmental Studies (Environmental Policy)</td>
+                </tr>
+                <tr>
+                    <td>Ariel (Xinyi) Pang</td>
+                    <td>2024–2025</td>
+                    <td>Master of Environmental Studies (Energy &amp; Carbon Markets)</td>
+                </tr>
+                <tr>
+                    <td>Chad Schwam</td>
+                    <td>2024–2025</td>
+                    <td>Master of Business Administration</td>
+                </tr>
+                <tr>
+                    <td>Deepthi Rao</td>
+                    <td>2024–2025</td>
+                    <td>Master of Environmental Studies</td>
+                </tr>
+                <tr>
+                    <td>Dominik Kau</td>
+                    <td>2024–2025</td>
+                    <td>MS in Scientific Computing</td>
+                </tr>
+                <tr>
+                    <td>Elizabeth Flatley</td>
+                    <td>2024–2025</td>
+                    <td>Master of Laws</td>
+                </tr>
+                <tr>
+                    <td>Emily Stephens</td>
+                    <td>2024–2025</td>
+                    <td>Master of Environmental Studies (Sustainability)</td>
+                </tr>
+                <tr>
+                    <td>Evelyn Gordi</td>
+                    <td>2024–2025</td>
+                    <td>Master of Environmental Studies (Sustainability)</td>
+                </tr>
+                <tr>
+                    <td>Giuli Nagai</td>
+                    <td>2024–2025</td>
+                    <td>Master of Environmental Studies (Sustainability)</td>
+                </tr>
+                <tr>
+                    <td>Jie Ying</td>
+                    <td>2024–2025</td>
+                    <td>Master of Environmental Studies (Energy &amp; Sustainability)</td>
+                </tr>
+                <tr>
+                    <td>Miquela Berge</td>
+                    <td>2024–2025</td>
+                    <td>M.S.Ed. in TESOL</td>
+                </tr>
+                <tr>
+                    <td>Narayani Sunil Pillai</td>
+                    <td>2024–2025</td>
+                    <td>Master of Environmental Studies (Sustainability)</td>
+                </tr>
+                <tr>
+                    <td>Ruth T. Lee</td>
+                    <td>2024–2025</td>
+                    <td>Master of Science in Nursing</td>
+                </tr>
+                <tr>
+                    <td>Sherry Xue</td>
+                    <td>2024–2025</td>
+                    <td>Master's in Integrated Product Design</td>
+                </tr>
+                <tr>
+                    <td>Shu Yi Neoh</td>
+                    <td>2024–2025</td>
+                    <td>Master of Environmental Studies</td>
+                </tr>
+                <tr>
+                    <td>Tiffany Yuan</td>
+                    <td>2024–2025</td>
+                    <td>MBA / MA in International Studies</td>
+                </tr>
+                <tr>
+                    <td>Vanshika Arora</td>
+                    <td>2024–2025</td>
+                    <td>Master of Environmental Studies (Sustainability)</td>
+                </tr>
+                <tr>
+                    <td>William Crawford</td>
+                    <td>2024–2025</td>
+                    <td>Master of Environmental Studies (Sustainability)</td>
+                </tr>
+                <tr>
+                    <td>Yujin Song</td>
+                    <td>2024–2025</td>
+                    <td>Master of City Planning</td>
+                </tr>
+
+                <!-- =====================
+                     2023 – 2024 COHORT
+                     ===================== -->
+                <tr>
+                    <td colspan="3" style="background:#f0f4f1; font-weight:700; color:#3a6b4a; font-style:normal; letter-spacing:0.04em; padding: 0.7em 1em;">
+                        2023 – 2024
+                    </td>
+                </tr>
+                <tr>
+                    <td>Aiswarya Murali</td>
+                    <td>2023–2024</td>
+                    <td>Master of Laws</td>
+                </tr>
+                <tr>
+                    <td>Isadora Almeida</td>
+                    <td>2023–2024</td>
+                    <td>Master of Laws</td>
+                </tr>
+                <tr>
+                    <td>Jack Miklaucic</td>
+                    <td>2023–2024</td>
+                    <td>Juris Doctor + Certificate in Energy Policy &amp; Management</td>
+                </tr>
+                <tr>
+                    <td>Anindita Rajesh</td>
+                    <td>2023–2024</td>
+                    <td>Master of Environmental Studies</td>
+                </tr>
+                <tr>
+                    <td>Ankita Patil</td>
+                    <td>2023–2024</td>
+                    <td>Master of Environmental Studies</td>
+                </tr>
+                <tr>
+                    <td>Heather Korzun</td>
+                    <td>2023–2024</td>
+                    <td>MPA / MES Dual Degree</td>
+                </tr>
+                <tr>
+                    <td>Justin Cairns</td>
+                    <td>2023–2024</td>
+                    <td>Master of Environmental Studies</td>
+                </tr>
+                <tr>
+                    <td>Marissa O'Neill</td>
+                    <td>2023–2024</td>
+                    <td>Master of Environmental Studies</td>
+                </tr>
+                <tr>
+                    <td>Riya Choudhury</td>
+                    <td>2023–2024</td>
+                    <td>Master of Environmental Studies</td>
+                </tr>
+                <tr>
+                    <td>Yonghyeon Kim</td>
+                    <td>2023–2024</td>
+                    <td>Master of Public Administration</td>
+                </tr>
+                <tr>
+                    <td>Raghav Khemka</td>
+                    <td>2023–2024</td>
+                    <td>Master of Environmental Studies</td>
+                </tr>
+                <tr>
+                    <td>Leonardo Acedo</td>
+                    <td>2023–2024</td>
+                    <td>MBA + MA in International Studies</td>
+                </tr>
+                <tr>
+                    <td>Luke Iott</td>
+                    <td>2023–2024</td>
+                    <td>MBA + MA in International Studies</td>
+                </tr>
+                <tr>
+                    <td>Radwan Munkarah</td>
+                    <td>2023–2024</td>
+                    <td>MBA + MA in International Studies</td>
+                </tr>
+                <tr>
+                    <td>Chandrima Shrivastava</td>
+                    <td>2023–2024</td>
+                    <td>Master of Business Administration</td>
+                </tr>
+                <tr>
+                    <td>Elan Joseph</td>
+                    <td>2023–2024</td>
+                    <td>Master of Business Administration</td>
+                </tr>
+                <tr>
+                    <td>Tiffany Chui</td>
+                    <td>2023–2024</td>
+                    <td>MS in Materials Science &amp; Engineering</td>
+                </tr>
+                <tr>
+                    <td>Zainab Afolabi</td>
+                    <td>2023–2024</td>
+                    <td>MS in Robotics</td>
+                </tr>
+                <tr>
+                    <td>Chenxi Zhu</td>
+                    <td>2023–2024</td>
+                    <td>Master of City Planning</td>
+                </tr>
+                <tr>
+                    <td>Richard Barad</td>
+                    <td>2023–2024</td>
+                    <td>Master of Urban Spatial Analytics</td>
+                </tr>
+                <tr>
+                    <td>Stephanie Cheng</td>
+                    <td>2023–2024</td>
+                    <td>Master of City Planning</td>
+                </tr>
+
+            </tbody>
+        </table>
+
+    </div>
+</section>
+
+			</div>
+
+			<!-- Footer -->
+			<footer id="footer">
+				<section>
+					<h2>Climate Leaders @ Penn</h2>
+					<p>A student-led graduate fellowship program dedicated to building 
+					the next generation of climate leaders at the University of Pennsylvania.</p>
+				</section>
+				<section>
+					<h2>Get In Touch</h2>
+					<dl class="alt">
+						<dt>University</dt>
+						<dd>University of Pennsylvania &bull; Philadelphia, PA</dd>
+						<dt>Email</dt>
+						<dd><a href="mailto:climateleadersatpenn@gmail.com">climateleadersatpenn@gmail.com</a></dd>
+					</dl>
+					<ul class="icons">
+						<li><a href="https://www.instagram.com/climateleadersatpenn/" class="icon brands fa-instagram alt"><span class="label">Instagram</span></a></li>
+                        <li><a href="https://www.linkedin.com/company/climate-leaders-penn/" class="icon brands fa-linkedin alt"><span class="label">LinkedIn</span></a></li>
+					</ul>
+				</section>
+				<p class="copyright">Climate Leaders @ Penn &bull; Design: <a href="https://html5up.net">HTML5 UP</a></p>
+			</footer>
+
+		</div>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

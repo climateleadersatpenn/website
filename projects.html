@@ -1,0 +1,350 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Projects | Climate Leaders @ Penn</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* ================================================
+			   PROJECTS PAGE STYLES
+			   ================================================ */
+
+			.projects-section {
+				padding: 4em 2em;
+				max-width: 1100px;
+				margin: 0 auto;
+			}
+
+			.projects-section h2 {
+				text-align: center;
+				margin-bottom: 0.5em;
+			}
+
+			.projects-section .section-subtitle {
+				text-align: center;
+				color: #888;
+				margin-bottom: 2.5em;
+				font-style: italic;
+			}
+
+			/* Coming soon box */
+			.coming-soon {
+				text-align: center;
+				padding: 3em 2em;
+				background: #f9f9f9;
+				border-radius: 8px;
+				max-width: 600px;
+				margin: 0 auto;
+				color: #888;
+			}
+
+			.coming-soon .icon {
+				font-size: 2.5em;
+				margin-bottom: 0.5em;
+				display: block;
+			}
+
+			.coming-soon h3 {
+				color: #666;
+				margin-bottom: 0.5em;
+			}
+
+			.coming-soon p {
+				font-size: 0.9em;
+				line-height: 1.7;
+			}
+
+			/* Project card grid */
+			.project-grid {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 2em;
+				justify-content: center;
+			}
+
+			/* Individual project card */
+			.project-card {
+				background: #fff;
+				border-radius: 8px;
+				box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+				padding: 2em 1.8em;
+				width: 300px;
+				transition: transform 0.2s ease, box-shadow 0.2s ease;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.project-card:hover {
+				transform: translateY(-4px);
+				box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+			}
+
+			/* Partner label */
+			.project-card .partner {
+				font-size: 0.78em;
+				font-weight: 700;
+				text-transform: uppercase;
+				letter-spacing: 0.08em;
+				color: #5a8a6a;
+				margin-bottom: 0.4em;
+			}
+
+			.project-card h3 {
+				font-size: 1.05em;
+				margin: 0 0 0.8em;
+				line-height: 1.4;
+			}
+
+			.project-card p {
+				font-size: 0.85em;
+				color: #555;
+				line-height: 1.7;
+				flex-grow: 1;
+			}
+
+			/* Status badge */
+			.badge {
+				display: inline-block;
+				font-size: 0.72em;
+				font-weight: 700;
+				text-transform: uppercase;
+				letter-spacing: 0.06em;
+				padding: 0.25em 0.7em;
+				border-radius: 20px;
+				margin-bottom: 0.8em;
+			}
+
+			.badge-completed {
+				background: #f0f0f0;
+				color: #888;
+			}
+
+			/* Section divider */
+			.section-divider {
+				border: none;
+				border-top: 1px solid #e0e0e0;
+				margin: 3em auto;
+				max-width: 800px;
+			}
+
+			/* Past projects table */
+			.past-projects-table {
+				max-width: 900px;
+				margin: 0 auto;
+				width: 100%;
+				border-collapse: collapse;
+				font-size: 0.9em;
+			}
+
+			.past-projects-table th {
+				text-align: left;
+				border-bottom: 2px solid #ddd;
+				padding: 0.6em 1em;
+				color: #444;
+			}
+
+			.past-projects-table td {
+				padding: 0.75em 1em;
+				border-bottom: 1px solid #eee;
+				color: #555;
+				vertical-align: top;
+			}
+
+			.past-projects-table tr:hover td {
+				background: #f9f9f9;
+			}
+
+			/* Responsive */
+			@media (max-width: 768px) {
+				.project-card {
+					width: 90%;
+					max-width: 360px;
+				}
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+		<div id="wrapper">
+
+			<!-- Header -->
+			<header id="header" class="alt">
+				<h1>Capstone Projects</h1>
+				<p>Fellows collaborate with community, industry, and university partners<br />
+				to produce impactful, professionally relevant research and reports.</p>
+			</header>
+
+			<!-- Nav -->
+			<nav id="nav">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="#current" class="active">Current Projects</a></li>
+					<li><a href="#past">Past Projects</a></li>
+				</ul>
+			</nav>
+
+			<!-- Main -->
+			<div id="main">
+
+				<!-- =====================
+				     CURRENT PROJECTS
+				     ===================== -->
+				<section id="current" class="main">
+					<div class="projects-section">
+						<h2>Current Projects</h2>
+						<p class="section-subtitle">2026–2027 cohort capstone projects.</p>
+
+						<!-- TODO: Replace coming-soon block with project cards when 2026-2027 projects are finalized.
+						     Copy a project card from the 2025-2026 section below as your template. -->
+						<div class="coming-soon">
+							<span class="icon">🌱</span>
+							<h3>Projects Coming Soon</h3>
+							<p>The 2026–2027 cohort's capstone projects are currently being finalized.
+							Check back soon to learn about the communities and organizations our
+							fellows will be working with this year.</p>
+						</div>
+
+					</div>
+				</section>
+
+				<hr class="section-divider">
+
+				<!-- =====================
+				     2025-2026 PROJECTS
+				     ===================== -->
+				<section id="past" class="main">
+					<div class="projects-section">
+						<h2>Past Projects</h2>
+						<p class="section-subtitle">A record of capstone projects completed by previous CL@P cohorts.</p>
+
+						<!-- 2025-2026 Cards -->
+						<h3 style="text-align:center; margin-bottom: 1.5em; color: #666;">2025–2026 Cohort</h3>
+						<div class="project-grid" style="margin-bottom: 3em;">
+
+							<!-- =============================
+							     PROJECT CARD TEMPLATE
+							     To add a project, copy one card
+							     block and update the fields.
+							     ============================= -->
+
+							<!-- Philadelphia Zoo -->
+							<div class="project-card">
+								<span class="badge badge-completed">Completed</span>
+								<div class="partner">Philadelphia Zoo</div>
+								<h3>Climate Impacts on Zoo Attendance</h3>
+								<p>Quantified how shifting weather patterns and climate change have affected seasonal attendance at the Philadelphia Zoo, and developed a forecasting model to help the Zoo anticipate attendance trends and adapt its operations and business planning accordingly.</p>
+							</div>
+
+							<!-- FMC -->
+							<div class="project-card">
+								<span class="badge badge-completed">Completed</span>
+								<div class="partner">FMC Corporation</div>
+								<h3>Understanding Climate Impacts on Growers</h3>
+								<p>Assessed climate-related risks — including drought, flooding, pest pressure, and temperature shifts — facing farmers in key FMC markets, and identified adaptation strategies. The project also evaluated how FMC's portfolio of products can support growers in responding to changing climate conditions.</p>
+							</div>
+
+							<!-- PA Fibershed -->
+							<div class="project-card">
+								<span class="badge badge-completed">Completed</span>
+								<div class="partner">PA Fibershed</div>
+								<h3>Textile Waste Management in Philadelphia</h3>
+								<p>Assessed the scale, impact, and potential of textile waste management in the Philadelphia region. The project examined existing models locally and abroad, mapped donation centers and shelters, and developed an actionable roadmap for a regional textile recycling or downcycling facility.</p>
+							</div>
+
+							<!-- Penn Vet -->
+							<div class="project-card">
+								<span class="badge badge-completed">Completed</span>
+								<div class="partner">Penn School of Veterinary Medicine</div>
+								<h3>Penn Vet Climate & Sustainability Action Plan</h3>
+								<p>Supported Penn Vet in developing its first Climate and Sustainability Action Plan (CSAP 1.0), aligned with Penn's university-wide CSAP 4.0 — making Penn Vet the first Penn school to create a school-specific CSAP. Included a baseline assessment, gap analysis, and preliminary recommendations.</p>
+							</div>
+
+							<!-- IJWEJ -->
+							<div class="project-card">
+								<span class="badge badge-completed">Completed</span>
+								<div class="partner">The Water Center at Penn & Global Water Alliance</div>
+								<h3>IJWEJ Special Edition: Water Equity & Justice</h3>
+								<p>Curated and published a special edition of the International Journal for Water Equity and Justice (IJWEJ), an open-access, peer-reviewed journal dedicated to advancing water equity globally. Fellows served in editorial, communications, and project management roles.</p>
+							</div>
+
+						</div>
+
+						<!-- 2024-2025 Table -->
+						<h3 style="text-align:center; margin-bottom: 1.5em; color: #666;">2024–2025 Cohort</h3>
+						<table class="past-projects-table">
+							<thead>
+								<tr>
+									<th>Partner</th>
+									<th>Project</th>
+									<th>Summary</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Philly TREEs</td>
+									<td>Urban Greenspace Equity</td>
+									<td>Analyzed how Philadelphia's affordable housing exemption impacted street tree planting and greenspace equity, producing a report on city code and community perspectives.</td>
+								</tr>
+								<tr>
+									<td>The Water Center at Penn</td>
+									<td>Water Reuse Policy</td>
+									<td>Investigated water reuse opportunities and challenges in the Northeast and Mid-Atlantic, assessing policy frameworks, economic impacts, and public perceptions.</td>
+								</tr>
+								<tr>
+									<td>Sally Blagg Family Foundation</td>
+									<td>Outdoors for All: Nature Access & Equity</td>
+									<td>Worked to understand and reduce physical and psycho-emotional barriers preventing equal access to green spaces in Philadelphia, through community interviews, a conference, and a community toolkit and storymap.</td>
+								</tr>
+								<tr>
+									<td>Penn Kleinman Center for Energy Policy</td>
+									<td>Agriculture, Energy & Land Use Conflict</td>
+									<td>Delivered a report on strategies to identify and manage land-use conflict between renewable energy and farmland, with agrivoltaics as a potential solution.</td>
+								</tr>
+								<!-- TODO: Add projects from earlier cohorts (2021-2022, 2022-2023, 2023-2024) if available -->
+							</tbody>
+						</table>
+
+					</div>
+				</section>
+
+			</div>
+
+			<!-- Footer -->
+			<footer id="footer">
+				<section>
+					<h2>Climate Leaders @ Penn</h2>
+					<p>A student-led graduate fellowship program dedicated to building
+					the next generation of climate leaders at the University of Pennsylvania.</p>
+				</section>
+				<section>
+					<h2>Get In Touch</h2>
+					<dl class="alt">
+						<dt>University</dt>
+						<dd>University of Pennsylvania &bull; Philadelphia, PA</dd>
+						<dt>Email</dt>
+						<dd><a href="mailto:climateleadersatpenn@gmail.com">climateleadersatpenn@gmail.com</a></dd>
+					</dl>
+					<ul class="icons">
+						<li><a href="https://www.instagram.com/climateleadersatpenn/" class="icon brands fa-instagram alt"><span class="label">Instagram</span></a></li>
+                        <li><a href="https://www.linkedin.com/company/climate-leaders-penn/" class="icon brands fa-linkedin alt"><span class="label">LinkedIn</span></a></li>
+					</ul>
+				</section>
+				<p class="copyright">Climate Leaders @ Penn &bull; Design: <a href="https://html5up.net">HTML5 UP</a></p>
+			</footer>
+
+		</div>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
